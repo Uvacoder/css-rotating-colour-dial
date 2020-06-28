@@ -1,7 +1,8 @@
 :root {
   --pointer-width: 25px;
   --pointer-midpoint: 15px;
-  --pointer-height: 150px;
+  --pointer-height: 140px;
+  --border-width: 10px;
 }
 
 body {
@@ -15,14 +16,17 @@ h3 {
 }
 
 .container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  /* background-color: grey; */
 }
 
 .wrapper {
-  position: relative;
+  position: absolute;
+  top: 100px;
 }
 
 .pointer {
@@ -31,8 +35,8 @@ h3 {
   transform: rotate(0deg);
   transform-origin: calc(var(--pointer-midpoint)) 100%;
   transition: all 1s ease;
-  top: calc(var(--pointer-width) * 2);
-  left: calc(var(--pointer-height) - var(--pointer-midpoint));
+  left: calc(var(--pointer-height) - var(--pointer-width) - var(--pointer-midpoint) + var(--border-width));
+  top: calc(50px + var(--border-width));
   background: none;
 }
 
@@ -40,42 +44,11 @@ h3 {
   position: absolute;
   height: calc(var(--pointer-height) * 2);
   width: calc(var(--pointer-height) * 2);
-  border: 0.5px solid rgba(255, 68, 0);
+  border: 10px solid #ddd;
   border-radius: 50%;
-  top: calc(var(--pointer-width) * 2);
-  left: 0;
+  top: 50px;
+  left: calc(var(--pointer-width) * -1);
   background-color: #f0f0f0;
-}
-
-.pointer > .end {
-  border-bottom: solid var(--pointer-width) orangered;
-  border-right: solid var(--pointer-midpoint) transparent;
-  border-left: solid var(--pointer-midpoint) transparent;
-}
-
-input[type="radio"] {
-  display: none;
-}
-
-.btn {
-  cursor: pointer;
-  padding: 4px 8px;
-  margin: 0;
-  font-weight: 500;
-  border-radius: 2px;
-}
-
-.btn:hover {
-  background-color: #f0f0f0;
-}
-
-input[type="radio"].not(:checked) + .btn {
-  background-color: #f0f0f0;
-}
-
-input[type="radio"]:checked + .btn {
-  background-color: orangered;
-  color: white;
 }
 
 input[type="radio"]#pos-1:checked ~ .pointer {
@@ -116,4 +89,38 @@ input[type="radio"]#pos-7:checked ~ .pointer {
 input[type="radio"]#pos-8:checked ~ .pointer {
   transform: rotate(315deg);
   transition: all 1s ease;
+}
+
+input[type="radio"] {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 4px 8px;
+  margin: 0;
+  font-weight: 500;
+  border-radius: 2px;
+  border: 0;
+}
+
+input[type="radio"]:not(:checked) + .btn {
+  background-color: #f0f0f0;
+}
+
+input[type="radio"]:checked + .btn {
+  background-color: orangered;
+  color: white;
+}
+
+.pointer > .end {
+  border-bottom: solid var(--pointer-width) orangered;
+  border-right: solid var(--pointer-midpoint) transparent;
+  border-left: solid var(--pointer-midpoint) transparent;
+}
+
+input[type="radio"]:not(:checked) + .btn:hover {
+  background-color: #e3e3e3;
 }
