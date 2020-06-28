@@ -1,0 +1,98 @@
+:root {
+  --pointer-width: 25px;
+  --pointer-midpoint: 15px;
+  --pointer-height: 150px;
+}
+
+.container {
+  position: relative;
+}
+
+.pointer {
+  position: absolute;
+  height: var(--pointer-height);
+  transform: rotate(0deg);
+  transform-origin: calc(var(--pointer-midpoint)) 100%;
+  transition: all 1s ease;
+  top: calc(var(--pointer-width) * 2);
+  left: calc(var(--pointer-height) - var(--pointer-midpoint));
+  background: none;
+}
+
+.pointer-outline {
+  position: absolute;
+  height: calc(var(--pointer-height) * 2);
+  width: calc(var(--pointer-height) * 2);
+  border: 0.5px solid rgba(255, 68, 0, 0.5);
+  border-radius: 50%;
+  top: calc(var(--pointer-width) * 2);
+  left: 0;
+}
+
+.pointer > .end {
+  border-bottom: solid var(--pointer-width) orangered;
+  border-right: solid var(--pointer-midpoint) transparent;
+  border-left: solid var(--pointer-midpoint) transparent;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 4px 8px;
+  margin: 0;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
+
+input[type="radio"].not(:checked) + .btn {
+  background-color: #f0f0f0;
+}
+
+input[type="radio"]:checked + .btn {
+  background-color: orangered;
+}
+
+input[type="radio"]#pos-1:checked ~ .pointer {
+  transform: rotate(0deg);
+  transition: all 1s ease;
+}
+
+input[type="radio"]#pos-2:checked ~ .pointer {
+  transform: rotate(45deg);
+  transition: all 1s ease;
+}
+
+input[type="radio"]#pos-3:checked ~ .pointer {
+  transform: rotate(90deg);
+  transition: all 1s ease;
+}
+
+input[type="radio"]#pos-4:checked ~ .pointer {
+  transform: rotate(135deg);
+  transition: all 1s ease;
+}
+
+input[type="radio"]#pos-5:checked ~ .pointer {
+  transform: rotate(180deg);
+  transition: all 1s ease;
+}
+
+input[type="radio"]#pos-6:checked ~ .pointer {
+  transform: rotate(-135deg);
+  transition: all 1s ease;
+}
+
+input[type="radio"]#pos-7:checked ~ .pointer {
+  transform: rotate(-90deg);
+  transition: all 1s ease;
+}
+
+input[type="radio"]#pos-8:checked ~ .pointer {
+  transform: rotate(-45deg);
+  transition: all 1s ease;
+}
