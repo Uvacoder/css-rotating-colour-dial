@@ -4,7 +4,24 @@
   --pointer-height: 150px;
 }
 
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 2rem;
+  color: orangered;
+}
+
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapper {
   position: relative;
 }
 
@@ -23,10 +40,11 @@
   position: absolute;
   height: calc(var(--pointer-height) * 2);
   width: calc(var(--pointer-height) * 2);
-  border: 0.5px solid rgba(255, 68, 0, 0.5);
+  border: 0.5px solid rgba(255, 68, 0);
   border-radius: 50%;
   top: calc(var(--pointer-width) * 2);
   left: 0;
+  background-color: #f0f0f0;
 }
 
 .pointer > .end {
@@ -55,6 +73,7 @@ input[type="radio"].not(:checked) + .btn {
 
 input[type="radio"]:checked + .btn {
   background-color: orangered;
+  color: white;
 }
 
 input[type="radio"]#pos-1:checked ~ .pointer {
