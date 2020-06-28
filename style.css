@@ -104,16 +104,16 @@ input[type="radio"]#pos-5:checked ~ .pointer {
 }
 
 input[type="radio"]#pos-6:checked ~ .pointer {
-  transform: rotate(-135deg);
+  transform: rotate(225deg);
   transition: all 1s ease;
 }
 
 input[type="radio"]#pos-7:checked ~ .pointer {
-  transform: rotate(-90deg);
+  transform: rotate(270deg);
   transition: all 1s ease;
 }
 
 input[type="radio"]#pos-8:checked ~ .pointer {
-  transform: rotate(-45deg);
+  transform: rotate(315deg);
   transition: all 1s ease;
 }
