@@ -48,7 +48,8 @@ h3 {
   border-radius: 50%;
   top: 50px;
   left: calc(var(--pointer-width) * -1);
-  background-color: #f0f0f0;
+  background-color: #f6f6f6;
+  transition: background 1s ease;
 }
 
 input[type="radio"]#pos-1:checked ~ .pointer {
@@ -56,9 +57,19 @@ input[type="radio"]#pos-1:checked ~ .pointer {
   transition: all 1s ease;
 }
 
+input[type="radio"]#pos-1:checked ~ .pointer-outline {
+  background-color: hsl(200, 100%, 50%) !important;
+  transition: background 1s ease;
+}
+
 input[type="radio"]#pos-2:checked ~ .pointer {
   transform: rotate(45deg);
   transition: all 1s ease;
+}
+
+input[type="radio"]#pos-2:checked ~ .pointer-outline {
+  background-color: hsl(185, 100%, 50%) !important;
+  transition: background 1s ease;
 }
 
 input[type="radio"]#pos-3:checked ~ .pointer {
@@ -66,9 +77,19 @@ input[type="radio"]#pos-3:checked ~ .pointer {
   transition: all 1s ease;
 }
 
+input[type="radio"]#pos-3:checked ~ .pointer-outline {
+  background-color: hsl(150, 100%, 50%) !important;
+  transition: background 1s ease;
+}
+
 input[type="radio"]#pos-4:checked ~ .pointer {
   transform: rotate(135deg);
   transition: all 1s ease;
+}
+
+input[type="radio"]#pos-4:checked ~ .pointer-outline {
+  background-color: hsl(75, 100%, 50%) !important;
+  transition: background 1s ease;
 }
 
 input[type="radio"]#pos-5:checked ~ .pointer {
@@ -76,9 +97,19 @@ input[type="radio"]#pos-5:checked ~ .pointer {
   transition: all 1s ease;
 }
 
+input[type="radio"]#pos-5:checked ~ .pointer-outline {
+  background-color: hsl(60, 100%, 50%) !important;
+  transition: background 1s ease;
+}
+
 input[type="radio"]#pos-6:checked ~ .pointer {
   transform: rotate(225deg);
   transition: all 1s ease;
+}
+
+input[type="radio"]#pos-6:checked ~ .pointer-outline {
+  background-color: hsl(50, 100%, 50%) !important;
+  transition: background 1s ease;
 }
 
 input[type="radio"]#pos-7:checked ~ .pointer {
@@ -86,9 +117,20 @@ input[type="radio"]#pos-7:checked ~ .pointer {
   transition: all 1s ease;
 }
 
+input[type="radio"]#pos-7:checked ~ .pointer-outline {
+  background-color: hsl(35, 100%, 50%) !important;
+  transition: background 1s ease;
+}
+
+
 input[type="radio"]#pos-8:checked ~ .pointer {
   transform: rotate(315deg);
   transition: all 1s ease;
+}
+
+input[type="radio"]#pos-8:checked ~ .pointer-outline {
+  background-color: hsl(15, 100%, 50%) !important;
+  transition: background 1s ease;
 }
 
 input[type="radio"] {
@@ -123,7 +165,8 @@ input[type="radio"]:not(:checked) + .btn:hover {
 }
 
 .pointer > .end {
-  border-bottom: solid var(--pointer-width) orangered;
+  border-bottom: solid var(--pointer-width) rgb(255, 255, 255);
   border-right: solid var(--pointer-midpoint) transparent;
   border-left: solid var(--pointer-midpoint) transparent;
+  box-shadow: 0 5px 5px -5px #00000099; 
 }
