@@ -108,19 +108,22 @@ input[type="radio"] {
 
 input[type="radio"]:not(:checked) + .btn {
   background-color: #f0f0f0;
+  transition: all 0.3s ease;
 }
 
 input[type="radio"]:checked + .btn {
   background-color: orangered;
   color: white;
+  transition: all 0.3s ease;
+}
+
+input[type="radio"]:not(:checked) + .btn:hover {
+  background-color: #e3e3e3;
+  transition: all 0.3s ease;
 }
 
 .pointer > .end {
   border-bottom: solid var(--pointer-width) orangered;
   border-right: solid var(--pointer-midpoint) transparent;
   border-left: solid var(--pointer-midpoint) transparent;
-}
-
-input[type="radio"]:not(:checked) + .btn:hover {
-  background-color: #e3e3e3;
 }
