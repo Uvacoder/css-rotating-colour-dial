@@ -12,7 +12,7 @@ body {
 h3 {
   font-weight: 500;
   font-size: 2rem;
-  color: orangered;
+  color: #58717a;
 }
 
 .container {
@@ -44,7 +44,7 @@ h3 {
   position: absolute;
   height: calc(var(--pointer-height) * 2);
   width: calc(var(--pointer-height) * 2);
-  border: 10px solid #ddd;
+  border: 10px solid #eee;
   border-radius: 50%;
   top: 50px;
   left: calc(var(--pointer-width) * -1);
@@ -154,7 +154,7 @@ input[type="radio"]:not(:checked) + .btn {
 }
 
 input[type="radio"]:checked + .btn {
-  background-color: orangered;
+  background-color: #58717a;
   color: white;
   transition: all 0.3s ease;
 }
