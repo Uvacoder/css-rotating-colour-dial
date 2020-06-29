@@ -6,13 +6,17 @@
 }
 
 body {
+  margin: 0;
+  box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
+  background-color: #000;
 }
 
 h3 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 2rem;
-  color: #23434e;
+  color: #999;
+  letter-spacing: 1px;
 }
 
 .container {
@@ -21,7 +25,6 @@ h3 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* background-color: grey; */
 }
 
 .wrapper {
@@ -44,7 +47,7 @@ h3 {
   position: absolute;
   height: calc(var(--pointer-height) * 2);
   width: calc(var(--pointer-height) * 2);
-  border: 10px solid #eee;
+  border: 10px solid #333;
   border-radius: 50%;
   top: 50px;
   left: calc(var(--pointer-width) * -1);
@@ -142,6 +145,7 @@ input[type="radio"]#pos-8:checked ~ .pointer-outline {
 
 input[type="radio"] {
   display: none;
+  visibility: hidden;
   width: 0;
   height: 0;
 }
@@ -163,7 +167,7 @@ input[type="radio"] {
 }
 
 input[type="radio"] + .btn {
-  opacity: 0.8;
+  opacity: 0.65;
   transition: all 0.3s ease;
 }
 
@@ -174,12 +178,13 @@ input[type="radio"] + .btn:hover {
 
 input[type="radio"]:checked + .btn {
   opacity: 1;
-  outline: 1px solid #23434e;
-  box-shadow: 0 5px 3px -1px #00000066;
+  /* outline: 2px solid black;
+  box-shadow: 0 0 5px 5px #ffffffaa; */
+  transition: all 0.3s ease;
 }
 
 .pointer > .end {
-  border-bottom: solid var(--pointer-width) rgb(255, 255, 255);
+  border-bottom: solid var(--pointer-width) #000;
   border-right: solid var(--pointer-midpoint) transparent;
   border-left: solid var(--pointer-midpoint) transparent;
   box-shadow: 0 5px 5px -5px #00000099; 
