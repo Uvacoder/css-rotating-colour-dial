@@ -57,6 +57,7 @@ input[type="radio"]#pos-1:checked ~ .pointer {
   transition: all 1s ease;
 }
 
+input[type="radio"]#pos-1:not(:checked) + .btn,
 input[type="radio"]#pos-1:checked ~ .pointer-outline {
   background-color: hsl(200, 100%, 50%) !important;
   transition: background 1s ease;
@@ -67,6 +68,7 @@ input[type="radio"]#pos-2:checked ~ .pointer {
   transition: all 1s ease;
 }
 
+input[type="radio"]#pos-2:not(:checked) + .btn,
 input[type="radio"]#pos-2:checked ~ .pointer-outline {
   background-color: hsl(185, 100%, 50%) !important;
   transition: background 1s ease;
@@ -77,6 +79,7 @@ input[type="radio"]#pos-3:checked ~ .pointer {
   transition: all 1s ease;
 }
 
+input[type="radio"]#pos-3:not(:checked) + .btn,
 input[type="radio"]#pos-3:checked ~ .pointer-outline {
   background-color: hsl(150, 100%, 50%) !important;
   transition: background 1s ease;
@@ -87,6 +90,7 @@ input[type="radio"]#pos-4:checked ~ .pointer {
   transition: all 1s ease;
 }
 
+input[type="radio"]#pos-4:not(:checked) + .btn,
 input[type="radio"]#pos-4:checked ~ .pointer-outline {
   background-color: hsl(75, 100%, 50%) !important;
   transition: background 1s ease;
@@ -97,6 +101,7 @@ input[type="radio"]#pos-5:checked ~ .pointer {
   transition: all 1s ease;
 }
 
+input[type="radio"]#pos-5:not(:checked) + .btn,
 input[type="radio"]#pos-5:checked ~ .pointer-outline {
   background-color: hsl(60, 100%, 50%) !important;
   transition: background 1s ease;
@@ -107,6 +112,7 @@ input[type="radio"]#pos-6:checked ~ .pointer {
   transition: all 1s ease;
 }
 
+input[type="radio"]#pos-6:not(:checked) + .btn,
 input[type="radio"]#pos-6:checked ~ .pointer-outline {
   background-color: hsl(50, 100%, 50%) !important;
   transition: background 1s ease;
@@ -117,17 +123,18 @@ input[type="radio"]#pos-7:checked ~ .pointer {
   transition: all 1s ease;
 }
 
+input[type="radio"]#pos-7:not(:checked) + .btn,
 input[type="radio"]#pos-7:checked ~ .pointer-outline {
   background-color: hsl(35, 100%, 50%) !important;
   transition: background 1s ease;
 }
-
 
 input[type="radio"]#pos-8:checked ~ .pointer {
   transform: rotate(315deg);
   transition: all 1s ease;
 }
 
+input[type="radio"]#pos-8:not(:checked) + .btn,
 input[type="radio"]#pos-8:checked ~ .pointer-outline {
   background-color: hsl(15, 100%, 50%) !important;
   transition: background 1s ease;
@@ -148,10 +155,10 @@ input[type="radio"] {
   border: 0;
 }
 
-input[type="radio"]:not(:checked) + .btn {
+/* input[type="radio"]:not(:checked) + .btn {
   background-color: #f0f0f0;
   transition: all 0.3s ease;
-}
+} */
 
 input[type="radio"]:checked + .btn {
   background-color: #58717a;
