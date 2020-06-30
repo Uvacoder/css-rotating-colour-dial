@@ -3,6 +3,8 @@
   --pointer-midpoint: 30px;
   --pointer-height: 140px;
   --border-width: 10px;
+  --pointer-adjust: 120px;
+  --pointer-diff: 35px;
 }
 
 body {
@@ -38,8 +40,8 @@ h3 {
   transform: rotate(0deg);
   transform-origin: calc(var(--pointer-midpoint)) 100%;
   transition: all 1s ease;
-  left: calc(var(--pointer-height) - var(--pointer-width) - var(--pointer-midpoint) + var(--border-width));
   top: calc(50px + var(--border-width));
+  left: calc(var(--pointer-adjust) - var(--pointer-diff));
   background: none;
 }
 
@@ -50,7 +52,7 @@ h3 {
   border: 10px solid #333;
   border-radius: 50%;
   top: 50px;
-  left: calc(var(--pointer-width) * -1);
+  left: calc(var(--pointer-diff) * -1);
   background-color: #f6f6f6;
   transition: background 1s ease;
 }
@@ -62,7 +64,7 @@ input[type="radio"]#pos-1:checked ~ .pointer {
 
 input[type="radio"]#pos-1 + .btn,
 input[type="radio"]#pos-1:checked ~ .pointer-outline {
-  background-color: hsl(200, 100%, 50%) !important;
+  background-color: hsl(195, 100%, 50%) !important;
   transition: background 1s ease;
 }
 
@@ -73,7 +75,7 @@ input[type="radio"]#pos-2:checked ~ .pointer {
 
 input[type="radio"]#pos-2 + .btn,
 input[type="radio"]#pos-2:checked ~ .pointer-outline {
-  background-color: hsl(185, 100%, 50%) !important;
+  background-color: hsl(180, 100%, 50%) !important;
   transition: background 1s ease;
 }
 
@@ -95,7 +97,7 @@ input[type="radio"]#pos-4:checked ~ .pointer {
 
 input[type="radio"]#pos-4 + .btn,
 input[type="radio"]#pos-4:checked ~ .pointer-outline {
-  background-color: hsl(75, 100%, 50%) !important;
+  background-color: hsl(80, 100%, 50%) !important;
   transition: background 1s ease;
 }
 
@@ -160,7 +162,7 @@ input[type="radio"] {
   padding: 4px 8px;
   margin: 0;
   font-weight: 500;
-  /* border-radius: 2px; */
+  border-radius: 3px;
   border: 0;
   outline: 1px solid none;
   background-color: inherit;
@@ -178,8 +180,6 @@ input[type="radio"] + .btn:hover {
 
 input[type="radio"]:checked + .btn {
   opacity: 1;
-  /* outline: 2px solid black;
-  box-shadow: 0 0 5px 5px #ffffffaa; */
   transition: all 0.3s ease;
 }
 
