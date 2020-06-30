@@ -1,6 +1,6 @@
 :root {
-  --pointer-width: 25px;
-  --pointer-midpoint: 15px;
+  --pointer-width: 50px;
+  --pointer-midpoint: 30px;
   --pointer-height: 140px;
   --border-width: 10px;
 }
