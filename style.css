@@ -141,7 +141,7 @@ input[type="radio"]#pos-8:checked ~ .pointer {
 
 input[type="radio"]#pos-8 + .btn,
 input[type="radio"]#pos-8:checked ~ .pointer-outline {
-  background-color: hsl(15, 100%, 50%) !important;
+  background-color: hsl(10, 100%, 50%) !important;
   transition: background 1s ease;
 }
 
