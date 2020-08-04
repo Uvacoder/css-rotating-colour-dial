@@ -1,6 +1,5 @@
-# Pure CSS rotating colour dial
+# Rotating colour dial
 
-## Description
 Made purely with CSS without any JavaScript
 
 + [Live demo](https://css-rotating-colour-dial.rjlevy.repl.co/)
